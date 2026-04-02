@@ -31,6 +31,78 @@ button {
   font-family: inherit;
 }
 
+/* NAVBAR */
+.header {
+  width: 100%;
+  background: #f8fafc;
+  padding: 18px 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #E4811E;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  color: #c96d13;
+  transform: scale(1.03);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: #E4811E;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #E4811E;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
 .page {
   width: 100%;
   max-width: 1500px;
@@ -201,7 +273,16 @@ button {
   box-shadow: 0 0 0 3px rgba(228, 129, 30, 0.15);
 }
 
-/* Resultado IMC */
+/* BLOCO DA CALCULADORA NA HOME */
+.calculator-box {
+  max-width: 600px;
+  margin: 60px auto 0;
+}
+
+.calculator-box .form-box input {
+  background: #1d1d1d;
+}
+
 .result-box {
   margin-top: 20px;
   padding: 18px;
@@ -219,102 +300,7 @@ button {
   color: var(--light);
 }
 
-/* Footer */
-
-.footer {
-  background: #181818;
-  margin-top: 60px;
-  border-top: 1px solid rgba(239, 239, 239, 0.08);
-  color: #EFEFEF;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px 30px;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
-}
-
-.footer-brand h2,
-.footer-links h3,
-.footer-contact h3 {
-  margin-bottom: 16px;
-}
-
-.footer-brand h2 {
-  color: #E4811E;
-  font-size: 1.8rem;
-}
-
-.footer-brand p,
-.footer-contact p {
-  color: rgba(239, 239, 239, 0.72);
-  line-height: 1.6;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-links a {
-  color: rgba(239, 239, 239, 0.78);
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #E1AB2A;
-  transform: translateX(4px);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(239, 239, 239, 0.08);
-  text-align: center;
-  padding: 18px 20px;
-}
-
-.footer-bottom p {
-  color: rgba(239, 239, 239, 0.6);
-  font-size: 0.95rem;
-}
-
-@media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .footer-brand,
-  .footer-links,
-  .footer-contact {
-    text-align: center;
-  }
-
-  .footer-links {
-    align-items: center;
-  }
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .banner {
-    padding: 30px;
-    min-height: 300px;
-  }
-
-  .banner h1 {
-    font-size: 2.2rem;
-  }
-
-  .page {
-    padding: 30px 16px;
-  }
-}
-
+/* PÁGINA EXCLUSIVA IMC */
 .imc-page {
   min-height: 100vh;
   display: flex;
@@ -409,6 +395,116 @@ button {
 .imc-resultado span {
   color: #EFEFEF;
   font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background: #181818;
+  margin-top: 60px;
+  border-top: 1px solid rgba(239, 239, 239, 0.08);
+  color: #EFEFEF;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand h2,
+.footer-links h3,
+.footer-contact h3 {
+  margin-bottom: 16px;
+}
+
+.footer-brand h2 {
+  color: #E4811E;
+  font-size: 1.8rem;
+}
+
+.footer-brand p,
+.footer-contact p {
+  color: rgba(239, 239, 239, 0.72);
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: rgba(239, 239, 239, 0.78);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #E1AB2A;
+  transform: translateX(4px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(239, 239, 239, 0.08);
+  text-align: center;
+  padding: 18px 20px;
+}
+
+.footer-bottom p {
+  color: rgba(239, 239, 239, 0.6);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-brand,
+  .footer-links,
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+  }
+
+  .banner {
+    padding: 30px;
+    min-height: 300px;
+  }
+
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .page {
+    padding: 30px 16px;
+  }
 }
 
 @media (max-width: 600px) {
