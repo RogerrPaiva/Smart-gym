@@ -8,8 +8,7 @@ function Home() {
         <div className="banner-text">
           <h1>Transforme seu corpo com a Smart Gym</h1>
           <p>
-            Treinos inteligentes, acompanhamento moderno e planos ideais
-            para sua evolução.
+            Tecnologia, inovação e bem-estar unidos para transformar sua experiência fitness.
           </p>
           <Link to="/planos" className="primary-btn">Ver Planos</Link>
         </div>
