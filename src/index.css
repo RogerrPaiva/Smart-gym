@@ -251,6 +251,17 @@ button {
   margin-top: 24px;
 }
 
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  color: var(--light);
+  font-weight: 600;
+}
+
 .form-box input,
 .form-box textarea {
   width: 100%;
@@ -271,6 +282,45 @@ button {
 .form-box textarea:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(228, 129, 30, 0.15);
+}
+
+.form-box .input-error {
+  border-color: #fb7185;
+  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.14);
+}
+
+.field-error {
+  color: #fda4af;
+  font-size: 0.92rem;
+}
+
+.form-status {
+  padding: 14px 16px;
+  border-radius: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.form-status-idle {
+  display: none;
+}
+
+.form-status-enviando {
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  color: #bfdbfe;
+}
+
+.form-status-sucesso {
+  background: rgba(34, 197, 94, 0.14);
+  border: 1px solid rgba(74, 222, 128, 0.38);
+  color: #bbf7d0;
+}
+
+.form-status-erro {
+  background: rgba(220, 38, 38, 0.14);
+  border: 1px solid rgba(248, 113, 113, 0.38);
+  color: #fecdd3;
 }
 
 /* BLOCO DA CALCULADORA NA HOME */
