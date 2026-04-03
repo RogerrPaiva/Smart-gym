@@ -10,8 +10,8 @@ function Calculadora() {
   function calcularIMC(e) {
     e.preventDefault()
 
-    const pesoNum = Number(peso)
-    const alturaNum = Number(altura)
+    const pesoNum = parseFloat(peso)
+    const alturaNum = parseFloat(altura)
 
     if (!pesoNum || !alturaNum) {
       setResultado('Preencha os campos corretamente.')

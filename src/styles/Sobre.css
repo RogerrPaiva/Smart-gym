@@ -1,0 +1,84 @@
+.sobre-page {
+  background: #f5f7fa;
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+.sobre-hero {
+  height: 320px;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80')
+      center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sobre-overlay {
+  color: white;
+  padding: 20px;
+}
+
+.sobre-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.sobre-overlay p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.sobre-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.sobre-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.sobre-card:hover {
+  transform: translateY(-5px);
+}
+
+.sobre-card h2 {
+  color: #0f172a;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.sobre-card p,
+.sobre-card li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.sobre-card ul {
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .sobre-hero {
+    height: 240px;
+  }
+
+  .sobre-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .sobre-overlay p {
+    font-size: 1rem;
+  }
+}
