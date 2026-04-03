@@ -1,0 +1,28 @@
+.imc-hint {
+  color: rgba(239, 239, 239, 0.72);
+  font-size: 0.95rem;
+  text-align: center;
+  margin-top: -4px;
+}
+
+.imc-resultado p {
+  color: rgba(239, 239, 239, 0.82);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.imc-resultado strong {
+  display: block;
+  color: #efe8c5;
+  line-height: 1.6;
+  margin-top: 14px;
+}
+
+.imc-resultado-erro {
+  background: rgba(220, 38, 38, 0.12);
+  border-color: rgba(248, 113, 113, 0.45);
+}
+
+.imc-resultado-erro h2 {
+  color: #fda4af;
+}
