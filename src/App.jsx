@@ -4,6 +4,7 @@ import Contato from "./pages/Contato"
 import Planos from "./pages/Planos"
 import Imc from "./pages/Imc"
 import Sobre from "./pages/Sobre"
+import Error from "./pages/Error"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/planos" element={<Planos />} />
         <Route path="/imc" element={<Imc />} />
         <Route path="/sobre" element={<Sobre />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </>
