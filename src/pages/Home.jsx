@@ -33,7 +33,8 @@ function Home() {
       </section>
 
       <section className="plans-preview">
-        <h2>Planos em destaque</h2>
+        <h2>Planos mais comprados</h2>
+        <p>Conheça os planos preferidos pelos alunos da Smart Gym.</p>
         <div className="plans-grid">
           <PlanCard
             nome="Plano Basic"
