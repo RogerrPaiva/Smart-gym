@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const initialFormData = {
   nome: '',
@@ -45,6 +46,8 @@ function validarFormulario(formData) {
 }
 
 function Contato() {
+  const location = useLocation()
+  const planoSelecionado = location.state?.planoSelecionado || ''
   const [formData, setFormData] = useState(initialFormData)
   const [erros, setErros] = useState({})
   const [statusEnvio, setStatusEnvio] = useState('idle')
@@ -94,6 +97,12 @@ function Contato() {
       <section className="contact-box">
         <h1>Contato</h1>
         <p>Preencha o formulário para falar com a Smart Gym.</p>
+
+        {planoSelecionado && (
+          <div className="selected-plan-box">
+            <strong>Plano de interesse:</strong> {planoSelecionado}
+          </div>
+        )}
 
         <form className="form-box" onSubmit={handleSubmit} noValidate>
           <div className="form-field">

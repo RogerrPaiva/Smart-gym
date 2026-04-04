@@ -243,6 +243,23 @@ button {
   color: var(--dark);
 }
 
+.plan-card-action {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.plan-card-action:hover {
+  background: var(--accent);
+  color: var(--dark);
+}
+
 /* Formulários */
 .form-box {
   display: flex;
@@ -321,6 +338,19 @@ button {
   background: rgba(220, 38, 38, 0.14);
   border: 1px solid rgba(248, 113, 113, 0.38);
   color: #fecdd3;
+}
+
+.selected-plan-box {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(225, 171, 42, 0.12);
+  border: 1px solid rgba(225, 171, 42, 0.3);
+  color: var(--light);
+}
+
+.selected-plan-box strong {
+  color: var(--accent);
 }
 
 /* BLOCO DA CALCULADORA NA HOME */
