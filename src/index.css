@@ -6,6 +6,7 @@
 
 :root {
   --primary: #ff8000;
+  --primary-hover: #e27200;
   --dark: #202020;
   --accent: #E1AB2A;
   --light: #EFEFEF;
@@ -81,8 +82,8 @@ button {
 }
 
 .primary-btn:hover {
-  background: var(--accent);
-  color: var(--dark);
+  background: var(--primary-hover);
+  color: var(--light);
   transform: translateY(-2px);
 }
 
@@ -176,8 +177,10 @@ button {
 }
 
 .secondary-btn:hover {
-  background: rgba(239, 239, 239, 0.08);
-  border-color: rgba(239, 239, 239, 0.28);
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: var(--light);
+  transform: translateY(-2px);
 }
 
 /* Grid */
@@ -326,8 +329,9 @@ button {
 
 .plan-card button:hover,
 .form-box button:hover {
-  background: var(--accent);
-  color: var(--dark);
+  background: var(--primary-hover);
+  color: var(--light);
+  transform: translateY(-2px);
 }
 
 .plan-card-action {
@@ -347,7 +351,7 @@ button {
 }
 
 .plan-card-action:hover {
-  background: #e27200;
+  background: var(--primary-hover);
   color: var(--light);
   transform: translateY(-2px);
 }
@@ -544,8 +548,8 @@ button {
 }
 
 .imc-form button:hover {
-  background: #E1AB2A;
-  color: #202020;
+  background: var(--primary-hover);
+  color: var(--light);
   transform: translateY(-2px);
 }
 
